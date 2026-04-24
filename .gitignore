@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Excel temp files
+~$*.xlsx
+~$*.xlsm
+*.tmp
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python (if scripts added later)
+__pycache__/
+*.pyc
+.venv/
+venv/
