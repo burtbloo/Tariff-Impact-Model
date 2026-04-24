@@ -2,6 +2,8 @@
 
 An Excel-based scenario model that quantifies how import tariffs by country of origin affect landed cost, target selling price, and gross margin across a produce wholesale catalog.
 
+![Dashboard](screenshots/dashboard.png)
+
 ## Overview
 
 This workbook was originally built during a financial analyst internship to model tariff exposure across an import-heavy catalog. It's been rebuilt here as a portfolio piece with fully synthetic data — no proprietary supplier, pricing, or margin information is included.
@@ -16,11 +18,24 @@ The model covers 230+ SKUs across 21 countries of origin and 10 product categori
 - **Impact Analysis** — per-SKU landed cost, margin, and scenario deltas with conditional formatting on margin erosion
 - **Methodology** — documented assumptions, definitions, and model limitations
 
+## Impact Analysis view
+
+![Impact Analysis](screenshots/impact_analysis.png)
+
+Per-SKU breakdown showing how margin erodes as tariff rates increase. The rightmost column (Margin Δ) uses a red-to-green color scale so compression is visible at a glance.
+
 ## How the model works
 
 Landed cost is calculated as `(Base Cost + Freight) × (1 + Tariff Rate)`. Target selling price is fixed at the baseline scenario (price-locked), so tariff increases compress margin rather than flow to the customer. This isolates the pure margin impact of tariff changes.
 
 The Impact Analysis tab flows through all calculations automatically — changing any blue input cell (tariff rate, markup, origin, base cost) recalculates the entire model.
+
+## Usage
+
+1. Download `Tariff_Impact_Model.xlsx` and open in Excel
+2. Adjust blue cells on the **Tariff Rates** tab to test different scenarios
+3. The **Dashboard** and **Impact Analysis** tabs recalculate automatically
+4. See the **Methodology** tab for full assumptions and definitions
 
 ## Stack
 
